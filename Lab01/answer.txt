@@ -1,0 +1,3 @@
+6.1. Write, compile and run the ChoosingOption program:
+- Khi người dùng chọn "Cancel", hộp thoại sẽ hiển thị lựa chọn phủ định (trong trường hợp này là "No").
+- Cách để tùy chỉnh các lựa chọn của người dùng: tại "JOptionPane.YES_OPTION?", ta có thể thay dòng chữ hiển thị trong ngoặc kép: bên trái dấu ":" là lựa chọn khẳng định (thường là "Yes", "I do"), bên phải dấu ":" là lựa chọn phủ định (thường là "No", "I don't").
