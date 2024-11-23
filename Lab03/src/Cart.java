@@ -76,4 +76,43 @@ public class Cart {
 		}
 		return total;
 	}
+	
+	public void print() {
+		System.out.println("*********************** CART ***********************");
+		System.out.println("Ordered Items:");
+		for (int i = 0; i < qtyOrdered; i++) {
+			System.out.println(toString(itemsOrdered[i]));
+		}
+		System.out.println("Total cost: " + totalCost());
+	}
+	
+	public String toString(DigitalVideoDisc dvd) {
+		return dvd.getId() +". " + dvd.getTitle() + " - " + dvd.getCategory() + " - " + dvd.getDirector()+ " - " + dvd.getLength() + " - " + dvd.getCost() + "$";
+	}
+	
+	public void searchID(int id) {
+		int count = 0;
+		for (int i = 0; i < qtyOrdered; i++) {
+			if (itemsOrdered[i].getId() == id) {
+				System.out.println("Found: " + toString(itemsOrdered[i]));
+				count++;
+			}
+		}
+		if (count <= 0) {
+			System.out.println("No match is found for the ID \"" + id + "\".");
+		}
+	}
+	
+	public void searchTitle(String title) {
+		int count = 0;
+		for (int i = 0; i < qtyOrdered; i++) {
+			if (itemsOrdered[i].isMatch(title)) {
+				System.out.println("Found: " + toString(itemsOrdered[i]));
+				count++;
+			}
+		}
+		if (count <= 0) {
+			System.out.println("No match is found for the title \"" + title + "\".");
+		}
+	}
 }
