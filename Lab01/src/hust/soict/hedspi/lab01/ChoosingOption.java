@@ -1,3 +1,4 @@
+package hust.soict.hedspi.lab01;
 // Hoàng Tố An - 20214980
 // IDE: Eclipse
 import javax.swing.JOptionPane;

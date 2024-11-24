@@ -1,3 +1,6 @@
+package hust.soict.hedspi.test.disc;
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+
 //	Hoàng Tố An - 20214980
 public class TestPassingParameter {
 

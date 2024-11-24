@@ -1,3 +1,5 @@
+package hust.soict.hedspi.aims.store;
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 
 public class Store {
 	public static final int MAXINSTORE = 200;
