@@ -1,10 +1,10 @@
-======	Câu 1
+======	Câu 1 (2.1 Overloading by differing types of parameter)
 Try to add a method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd. Compare to an array parameter. What do you prefer in this case?
 
 ------	Trả lời
 Hai phương pháp đều cho phép ghép mảng độ dài tùy ý vào mảng có sẵn. Khi dùng với [] thì bắt buộc phải khai báo đầu vào là một mảng; còn dùng "..." thì không cần nên nó linh động hơn, có thể thay thế hoàn toàn phương thức addDigitalVideoDisc(DigitalVideoDisc disc). Vì vậy, em thích dùng "..." hơn.
 
-======	Câu 2
+======	Câu 2 (3. Passing parameter)
 Is JAVA a Pass by Value or a Pass by Reference programming language?
 ● After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
 ● After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
