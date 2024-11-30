@@ -9,6 +9,7 @@ public class Track {
 	public Track(String title) {
 		super();
 		this.title = title;
+		this.length = 0;
 	}
 	public Track(String title, int length) {
 		super();

@@ -19,6 +19,11 @@ public abstract class Media {
 		nbMedia++;
 		this.id = nbMedia;
 	}
+	
+	public Media(String title, float cost) {
+		this.title = title;
+		this.cost = cost;
+	}
 
 	public Media(String title, String category, float cost) {
 		super();
