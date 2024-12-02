@@ -8,6 +8,9 @@ Which classes are aggregates of other classes?
 ======	Câu 2 (10. Unique item in a list)
 If the passing object is not an instance of Media, what happens?
 
+------	Trả lời
+Nếu object không phải là instance của Media thì sẽ bị lỗi run-time (ClassCastException). Vì vậy cần dùng hàm instanceof để kiểm tra object có phải là instance của Media hay không.
+
 ======	Câu 3 (12. Sort media in the cart)
 Alternatively, to compare items in the cart, instead of using Comparator, we can use the Comparable interface and override the compareTo()method. You can refer to the Java docs to see the information of this interface. 
 Suppose we are taking this Comparable interface approach.

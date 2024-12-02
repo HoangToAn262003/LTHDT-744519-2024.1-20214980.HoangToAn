@@ -52,6 +52,14 @@ public abstract class Media {
 		return cost;
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if (!(o instanceof Media)) return false;
+		
+		Media m = (Media) o;
+		return this.title == m.title;
+	}
+	
 	public boolean isMatch(String title) {
 		return this.getTitle().toLowerCase().contains(title);
 	}
