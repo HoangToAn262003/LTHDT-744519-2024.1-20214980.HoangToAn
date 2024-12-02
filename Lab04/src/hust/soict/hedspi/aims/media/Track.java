@@ -27,6 +27,9 @@ public class Track implements Playable {
 		Track t = (Track) o;
 		return this.title == t.title && this.length == t.length;
 	}
+	public String toString() {
+		return this.title + " - " + this.length;
+	}
 	public void play() {
 		System.out.println("Playing track: " + this.getTitle());
 		System.out.println("Track length: " + this.getLength());

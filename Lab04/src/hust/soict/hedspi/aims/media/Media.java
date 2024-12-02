@@ -60,6 +60,10 @@ public abstract class Media {
 		return this.title == m.title;
 	}
 	
+	public String toString() {
+		return this.id +". " + this.title + " - " + this.category + " - " + this.cost + "$";
+	}
+	
 	public boolean isMatch(String title) {
 		return this.getTitle().toLowerCase().contains(title);
 	}
