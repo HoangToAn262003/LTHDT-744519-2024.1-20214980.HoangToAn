@@ -9,15 +9,18 @@ public class Book extends Media{
 	public Book() {
 	}
 
-	public void addAuthor(String authorName) {
-		for (String name : authors) {
-			if (name.equalsIgnoreCase(authorName)) {
-				System.out.println("Cannot add " + authorName + " to the list of authors.");
-				return;
+	public void addAuthor(String... newAuthors) {
+		for (String newName : newAuthors) {
+			int flag = 0;
+			for (String name : authors) {
+				if (name.equalsIgnoreCase(newName)) {
+					System.out.println("Cannot add " + newName + " to the list of authors.");
+					flag++;
+					break;
+				}
 			}
+			if (flag == 0) authors.add(newName);
 		}
-		authors.add(authorName);
-		return;
 	}
 	
 	public void removeAuthor(String authorName) {
@@ -28,7 +31,6 @@ public class Book extends Media{
 			}
 		}
 		System.out.println("Removed " + cnt + " authors from the list.");
-		return;
 	}
 
 }
