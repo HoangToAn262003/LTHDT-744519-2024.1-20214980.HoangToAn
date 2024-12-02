@@ -6,7 +6,8 @@ import java.util.List;
 public class Book extends Media{
 	private List<String> authors = new ArrayList<String>();
 	
-	public Book() {
+	public Book(String title) {
+		super(title);
 	}
 
 	public void addAuthor(String... newAuthors) {
@@ -31,6 +32,10 @@ public class Book extends Media{
 			}
 		}
 		System.out.println("Removed " + cnt + " authors from the list.");
+	}
+	
+	public String toString() {
+		return this.getId() + ". [Book] " + this.getTitle() + " - " + this.getCategory() + " - " + this.getCost() + "$";
 	}
 
 }

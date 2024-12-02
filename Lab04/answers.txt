@@ -11,10 +11,20 @@ If the passing object is not an instance of Media, what happens?
 ------	Trả lời
 Nếu object không phải là instance của Media thì sẽ bị lỗi run-time (ClassCastException). Vì vậy cần dùng hàm instanceof để kiểm tra object có phải là instance của Media hay không.
 
-======	Câu 3 (12. Sort media in the cart)
+======	Câu 3 (11. Polymorphism with toString() method)
+Iterate through the list and print out the information of the media by using toString() method. Observe what happens and explain in detail.
+
+------	Trả lời
+Trong bài tập này, em đặt hàm toString() trong các lớp Media, DigitalVideoDisc, CompactDisc và Book.
+
+Khi chạy vòng lặp qua mảng mediae gọi hàm toString() cho từng phần tử được khởi tạo bằng các kiểu khác nhau, hàm được gọi chính là hàm tồn tại trong lớp ấy, như là: DigitalVideoDisc dvd = new DigitalVideoDisc("Shrek") mà có mediae.add(dvd) thực hiện upcasting từ DigitalVideoDisc thành Media thì khi gọi System.out.println(m.toString()) sẽ dùng hàm toString() của DigitalVideoDisc.
+
+Trình biên dịch không biết nên gọi hàm toString() nào là hợp lý do nó chỉ có thể dựa vào kiểu dữ liệu đầu vào để phân biệt (method overloading). Thay vào đó, nó sẽ gọi hàm dựa vào kiểu khai báo đối tượng lúc chạy chương trình (run-time), mà kiểu khai báo ở đây là DigitalVideoDisc. Đây được gọi là gắn kết động (dynamic binding).
+
+======	Câu 4 (12. Sort media in the cart)
 Alternatively, to compare items in the cart, instead of using Comparator, we can use the Comparable interface and override the compareTo()method. You can refer to the Java docs to see the information of this interface. 
 Suppose we are taking this Comparable interface approach.
--	What class should implement the Comparable interface?
--	In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
--	Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
--	Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+- What class should implement the Comparable interface?
+- In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
+- Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+- Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
