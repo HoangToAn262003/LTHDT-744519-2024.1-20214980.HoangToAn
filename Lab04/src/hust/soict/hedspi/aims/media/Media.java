@@ -23,6 +23,8 @@ public abstract class Media {
 	public Media(String title, float cost) {
 		this.title = title;
 		this.cost = cost;
+		nbMedia++;
+		this.id = nbMedia;
 	}
 
 	public Media(String title, String category, float cost) {
