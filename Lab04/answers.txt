@@ -38,9 +38,9 @@ Suppose we are taking this Comparable interface approach.
 		else return this.title.compareTo(m.getTitle());
 	}
 - Ta không thể cài được nhiều quy luật so sánh vì cần cài phương thức compareTo() mới mà dữ liệu đầu vào phải giống nhau, dẫn đến Java không phân biệt được.
-- Trong class DigitalVideoDisc, ta thêm implements Comparable<DigitalVideoDisc> và cài:
+- Trong class DigitalVideoDisc, em thêm implements Comparable<DigitalVideoDisc> và cài:
 	public int compareTo(DigitalVideoDisc dvd) {		
-		int compTitle = this.title.compareto(dvd.getTitle());
+		int compTitle = this.title.compareTo(dvd.getTitle());
 		if (compTitle != 0) return compTitle;
 		if (this.getLength() < dvd.getLength()) return 1;
 		if (this.getLength() > dvd.getLength()) return -1;
