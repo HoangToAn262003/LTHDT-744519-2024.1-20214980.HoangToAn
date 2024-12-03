@@ -15,7 +15,7 @@ public class Cart {
 			for (Media m : ms) {
 				itemsOrdered.add(m);
 			}
-			System.out.println(ms.length + " item(s) have been added to cart (" + itemsOrdered.size() + " item(s) in cart).");
+			System.out.println(ms.length + " item(s) have been added to cart (" + itemsOrdered.size() + " item(s) in c).");
 		}
 		else {
 			System.out.println("ERROR: Unable to add items to cart.");
@@ -26,7 +26,7 @@ public class Cart {
 		for (Media m : itemsOrdered) {
 			if (m.getTitle().equals(media.getTitle())) {
 				itemsOrdered.remove(m);
-				System.out.println(media.getTitle() + " has been removed from cart ("+ itemsOrdered.size() + " item(s) in cart).");
+				System.out.println(media.getTitle() + " has been removed from cart ("+ itemsOrdered.size() + " item(s) in c).");
 			}
 		}
 	}
@@ -56,7 +56,7 @@ public class Cart {
 		int count = 0;
 		for (Media m : itemsOrdered) {
 			if (m.getId() == id) {
-				System.out.println("Found: " + toString(m));
+				System.out.println(toString(m));
 				count++;
 			}
 		}
@@ -69,12 +69,16 @@ public class Cart {
 		int count = 0;
 		for (Media m : itemsOrdered) {
 			if (m.isMatch(title)) {
-				System.out.println("Found: " + toString(m));
+				System.out.println(toString(m));
 				count++;
 			}
 		}
 		if (count <= 0) {
 			System.out.println("No match is found for the title \"" + title + "\".");
 		}
+	}
+
+	public ArrayList<Media> getItemsOrdered() {
+		return itemsOrdered;
 	}
 }
