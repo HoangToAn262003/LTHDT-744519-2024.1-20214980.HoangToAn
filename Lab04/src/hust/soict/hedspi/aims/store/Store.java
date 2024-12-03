@@ -5,6 +5,10 @@ import hust.soict.hedspi.aims.media.Media;
 public class Store {
 	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 	
+	public ArrayList<Media> getItemsInStore() {
+		return itemsInStore;
+	}
+
 	public void addMedia(Media... ms) {
 		for (Media m : ms) {
 			itemsInStore.add(m);
@@ -26,7 +30,7 @@ public class Store {
 	
 	public void print() {
 		System.out.println("*********************** STORE ***********************");
-		System.out.println("Ordered Items:");
+		System.out.println("Items in Store:");
 		for (Media m : itemsInStore) {
 			System.out.println(toString(m));
 		}
