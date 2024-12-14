@@ -11,6 +11,10 @@ import javax.swing.JTextField;
 
 public class SwingAccumulator extends JFrame {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextField tfInput;
 	private JTextField tfOutput;
 	private int sum = 0;
