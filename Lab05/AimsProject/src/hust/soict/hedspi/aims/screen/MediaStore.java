@@ -20,8 +20,9 @@ public class MediaStore extends JPanel{
 	private Media media;
 	private Cart cart;
 	
-	public MediaStore(Media media) {
+	public MediaStore(Cart cart, Media media) {
 		this.media = media;
+		this.cart = cart;
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		JLabel title = new JLabel(media.getTitle());
