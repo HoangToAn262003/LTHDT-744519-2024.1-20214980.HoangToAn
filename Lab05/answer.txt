@@ -1,0 +1,5 @@
+======	Câu hỏi phần 14
+[...] What happens when you don't update for them to catch?
+
+------	Trả lời
+Chương trình sẽ gặp lỗi runtime khi có đối tượng gọi phương thức đó.
